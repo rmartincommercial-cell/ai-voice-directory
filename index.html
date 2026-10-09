@@ -8,11 +8,11 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
     <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/20">V</div>
-                <span class="font-bold text-lg tracking-tight">VoiceAgency<span class="text-indigo-400">.pro</span></span>
+    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <div class="h-8 w-8 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-base sm:text-xl shadow-lg shadow-indigo-500/20">V</div>
+                <span class="font-bold text-sm sm:text-lg tracking-tight">VoiceAgency<span class="text-indigo-400">.pro</span></span>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#niches" class="hover:text-white transition">Niches</a>
@@ -20,13 +20,13 @@
                 <a href="#benefits" class="hover:text-white transition">For Agencies</a>
             </nav>
             <div>
-                <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition shadow-lg shadow-indigo-600/30">List Your Agency</a>
+                <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition shadow-lg shadow-indigo-600/30">List Your Agency</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-24 pb-20 overflow-hidden">
+    <section class="relative pt-16 sm:pt-24 pb-16 sm:pb-20 overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-8 uppercase tracking-wider">
                 <span>Global Verified Directory</span>
@@ -45,7 +45,7 @@
     </section>
 
     <!-- Niches Section with 4 Global Agencies per Card -->
-    <section id="niches" class="py-20 border-t border-slate-900 bg-slate-900/20">
+    <section id="niches" class="py-20 border-t border-slate-900 bg-slate-900/20 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold mb-4">Specialized Voice Architectures</h2>
@@ -182,7 +182,7 @@
     </section>
 
     <!-- Pricing / Lemon Squeezy Section -->
-    <section id="pricing" class="py-20 border-t border-slate-900 bg-slate-900/40">
+    <section id="pricing" class="py-20 border-t border-slate-900 bg-slate-900/40 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-4">Select Your Listing Tier</h2>
             <p class="text-slate-400 mb-16 max-w-xl mx-auto">Position your agency in front of global enterprise buyers searching for specialized voice stacks.</p>
@@ -201,7 +201,6 @@
                             <li class="flex items-center space-x-2"><span>✓</span><span>Verified global agency badge</span></li>
                         </ul>
                     </div>
-                    <!-- REEMPLAZA EL ENLACE '#' CON TU URL DE CHECKOUT DE LEMON SQUEEZY -->
                     <a href="https://tu-tienda.lemonsqueezy.com/buy/tu-producto-pro" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30">Get Pro Listing</a>
                 </div>
 
@@ -219,8 +218,37 @@
                             <li class="flex items-center space-x-2"><span>✓</span><span>Dedicated priority lead routing</span></li>
                         </ul>
                     </div>
-                    <!-- REEMPLAZA EL ENLACE '#' CON TU URL DE CHECKOUT DE LEMON SQUEEZY -->
                     <a href="https://tu-tienda.lemonsqueezy.com/buy/tu-producto-enterprise" target="_blank" class="block text-center bg-white hover:bg-slate-200 text-slate-950 font-semibold py-3.5 rounded-xl text-sm transition shadow-xl">Get Enterprise Tier</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits / For Agencies Section -->
+    <section id="benefits" class="py-20 border-t border-slate-900 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Why Global Voice Agencies List With Us</h2>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>Global Enterprise Traffic:</strong> Direct access to buyers worldwide searching for robust voice architectures.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>International Authority:</strong> Position your agency in front of high-ticket international accounts.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>Direct Conversion:</strong> Zero friction routing straight to your booking links and portfolios.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
+                    <h3 class="text-xl font-bold mb-2">Ready to Scale Globally?</h3>
+                    <p class="text-slate-400 text-sm mb-6">Join our verified international roster and capture enterprise inbound leads.</p>
+                    <a href="#pricing" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30">Apply For Global Listing</a>
                 </div>
             </div>
         </div>
