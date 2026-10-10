@@ -1,262 +1,131 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verified AI Voice Agencies | Global B2B Directory</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
-    <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2 sm:space-x-3">
-                <div class="h-8 w-8 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-base sm:text-xl shadow-lg shadow-indigo-500/20">V</div>
-                <span class="font-bold text-sm sm:text-lg tracking-tight">VoiceAgency<span class="text-indigo-400">.pro</span></span>
+import React from 'react';
+
+interface AgencyCardProps {
+  name: string;
+  description: string;
+  logoUrl: string;
+  websiteUrl: string;
+  category: string;
+  location?: string;
+  isExclusive?: boolean;
+}
+
+export const AgencyCard: React.FC<AgencyCardProps> = ({
+  name,
+  description,
+  logoUrl,
+  websiteUrl,
+  category,
+  location = 'Global',
+  isExclusive = false,
+}) => {
+  // Enlace saliente con parámetros UTM para trazabilidad de leads
+  const utmTargetUrl = `${websiteUrl}?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=${
+    isExclusive ? 'exclusive_sponsor' : 'pro_member'
+  }`;
+
+  // -------------------------------------------------------------
+  // 1. TARJETA EXCLUSIVA DE CATEGORÍA (500 €/mes) - MÁXIMO IMPACTO
+  // -------------------------------------------------------------
+  if (isExclusive) {
+    return (
+      <div className="relative w-full mb-6 group">
+        {/* Halo de brillo/glow dorado exterior */}
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
+
+        {/* Estructura principal de la tarjeta */}
+        <div className="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-5 sm:p-6 shadow-2xl flex flex-col justify-between gap-5">
+          
+          {/* Cabeza: Badge Exclusivo y Categoría */}
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              ⭐ Exclusive Category Leader
+            </span>
+            <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest">
+              {location}
+            </span>
+          </div>
+
+          {/* Contenido: Logo + Título + Descripción */}
+          <div className="flex items-start gap-4">
+            <img
+              src={logoUrl}
+              alt={`${name} logo`}
+              className="w-14 h-14 rounded-xl object-contain bg-slate-950 p-2 border border-slate-800 shrink-0 shadow-inner"
+            />
+            <div className="space-y-1.5">
+              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                {name}
+                <svg className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                </svg>
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
+                {description}
+              </p>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#niches" class="hover:text-white transition">Niches</a>
-                <a href="#pricing" class="hover:text-white transition">Pricing</a>
-                <a href="#benefits" class="hover:text-white transition">For Agencies</a>
-            </nav>
-            <div>
-                <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition shadow-lg shadow-indigo-600/30">List Your Agency</a>
+          </div>
+
+          {/* Pie: Estado y Botón de Acción (CTA) */}
+          <div className="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+            <div className="text-[11px] text-slate-400 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Verified Enterprise Integrator</span>
             </div>
+
+            <a
+              href={utmTargetUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] text-center"
+            >
+              <span>Visit Agency</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
         </div>
-    </header>
+      </div>
+    );
+  }
 
-    <!-- Hero Section -->
-    <section class="relative pt-16 sm:pt-24 pb-16 sm:pb-20 overflow-hidden">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-8 uppercase tracking-wider">
-                <span>Global Verified Directory</span>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                Verified AI Voice Agencies for <span class="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">Global Enterprises</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Connect with elite conversational AI developers building multi-region voice architectures for luxury real estate, private healthcare, and corporate law.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#niches" class="bg-white text-slate-950 font-semibold px-8 py-4 rounded-xl hover:bg-slate-200 transition shadow-xl">Browse Global Roster</a>
-                <a href="#pricing" class="bg-slate-900 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl hover:bg-slate-800 transition">View Listing Tiers</a>
-            </div>
+  // -------------------------------------------------------------
+  // 2. TARJETA ESTÁNDAR PLAN PRO (200 €/mes)
+  // -------------------------------------------------------------
+  return (
+    <div className="w-full bg-slate-900/60 border border-slate-800/90 rounded-xl p-4 hover:border-slate-700 transition-all flex flex-col justify-between gap-3 mb-3">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <img
+            src={logoUrl}
+            alt={name}
+            className="w-10 h-10 rounded-lg bg-slate-950 p-1.5 border border-slate-800 object-contain"
+          />
+          <div>
+            <h4 className="text-sm font-semibold text-white">{name}</h4>
+            <span className="text-[10px] text-slate-400 font-mono">{location}</span>
+          </div>
         </div>
-    </section>
+        <span className="text-[10px] bg-slate-800/80 text-slate-300 px-2 py-0.5 rounded border border-slate-700/60 font-medium">
+          Pro
+        </span>
+      </div>
 
-    <!-- Niches Section with 4 Global Agencies per Card -->
-    <section id="niches" class="py-20 border-t border-slate-900 bg-slate-900/20 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold mb-4">Specialized Voice Architectures</h2>
-                <p class="text-slate-400">Explore international vetted providers engineered for global compliance and high-value conversion.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Luxury Real Estate -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Real Estate</div>
-                        <h3 class="text-xl font-bold mb-3">Luxury Real Estate</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Automated cross-border lead qualification and VIP booking systems for international property portfolios.</p>
-                        
-                        <!-- 4 Global Agencies -->
-                        <div class="space-y-3 pt-4 border-t border-slate-800/80 mb-6">
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Apex Voice Labs</p>
-                                    <p class="text-xs text-slate-400">San Francisco / London</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Silicon Estate AI</p>
-                                    <p class="text-xs text-slate-400">New York / Miami</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Vanguard PropTech</p>
-                                    <p class="text-xs text-slate-400">Dubai / Singapore</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">PrimeDial Real Estate</p>
-                                    <p class="text-xs text-slate-400">Madrid / Paris</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#pricing" class="text-xs font-semibold text-indigo-400 flex items-center hover:text-indigo-300">Full Roster & Apply &rarr;</a>
-                </div>
+      <p className="text-xs text-slate-400 line-clamp-2">{description}</p>
 
-                <!-- Private Healthcare -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Healthcare</div>
-                        <h3 class="text-xl font-bold mb-3">Private Healthcare</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Secure, multi-region virtual medical receptionists adhering to international privacy frameworks.</p>
-                        
-                        <!-- 4 Global Agencies -->
-                        <div class="space-y-3 pt-4 border-t border-slate-800/80 mb-6">
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">MedVoice Global</p>
-                                    <p class="text-xs text-slate-400">Zurich / Boston</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">HealthDial Systems</p>
-                                    <p class="text-xs text-slate-400">London / Singapore</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">CliniqueVoice AI</p>
-                                    <p class="text-xs text-slate-400">Geneva / Berlin</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Biocall Solutions</p>
-                                    <p class="text-xs text-slate-400">San Diego / Toronto</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#pricing" class="text-xs font-semibold text-indigo-400 flex items-center hover:text-indigo-300">Full Roster & Apply &rarr;</a>
-                </div>
-
-                <!-- Corporate Law -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Legal</div>
-                        <h3 class="text-xl font-bold mb-3">Corporate Law</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Encrypted intake screening and automated multi-jurisdiction scheduling for global law firms.</p>
-                        
-                        <!-- 4 Global Agencies -->
-                        <div class="space-y-3 pt-4 border-t border-slate-800/80 mb-6">
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">LexGlobal AI</p>
-                                    <p class="text-xs text-slate-400">New York / London</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">JurisVoice Int.</p>
-                                    <p class="text-xs text-slate-400">Frankfurt / Toronto</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">LegalDial Partners</p>
-                                    <p class="text-xs text-slate-400">Sydney / London</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Veritas Voice Group</p>
-                                    <p class="text-xs text-slate-400">Washington / Amsterdam</p>
-                                </div>
-                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-medium">Global</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#pricing" class="text-xs font-semibold text-indigo-400 flex items-center hover:text-indigo-300">Full Roster & Apply &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing / Lemon Squeezy Section -->
-    <section id="pricing" class="py-20 border-t border-slate-900 bg-slate-900/40 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Select Your Listing Tier</h2>
-            <p class="text-slate-400 mb-16 max-w-xl mx-auto">Position your agency in front of global enterprise buyers searching for specialized voice stacks.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
-                <!-- Pro Tier (€200/mo) -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">Pro Placement</div>
-                        <h3 class="text-2xl font-bold mb-4">Featured Directory Listing</h3>
-                        <p class="text-slate-400 text-sm mb-6">Ideal for established voice agencies looking for consistent inbound leads from high-end clients.</p>
-                        <div class="text-3xl font-extrabold mb-6">€200<span class="text-sm font-normal text-slate-400"> / month</span></div>
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Top-tier placement in your target niche</span></li>
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Direct routing to your booking link</span></li>
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Verified global agency badge</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://sentinel-rm.lemonsqueezy.com/checkout/buy/ddfa7b23-f7d7-4d81-9be9-d553376bafcf" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30">Get Pro Listing</a>
-                </div>
-
-                <!-- Enterprise Tier (€500/mo) -->
-                <div class="bg-slate-900 border border-indigo-500/50 p-8 rounded-2xl flex flex-col justify-between relative shadow-xl shadow-indigo-500/5">
-                    <div class="absolute -top-3 right-8 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</div>
-                    <div>
-                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">Enterprise Retainer</div>
-                        <h3 class="text-2xl font-bold mb-4">Exclusive Partner Roster</h3>
-                        <p class="text-slate-400 text-sm mb-6">Maximum visibility across all categories with priority routing and customized case study showcases.</p>
-                        <div class="text-3xl font-extrabold mb-6">€500<span class="text-sm font-normal text-slate-400"> / month</span></div>
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Featured #1 slot across all 3 niches</span></li>
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Custom case study integration</span></li>
-                            <li class="flex items-center space-x-2"><span>✓</span><span>Dedicated priority lead routing</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://sentinel-rm.lemonsqueezy.com/checkout/buy/dda1580a-2257-45ad-a819-2fa55dd8c2b9" target="_blank" class="block text-center bg-white hover:bg-slate-200 text-slate-950 font-semibold py-3.5 rounded-xl text-sm transition shadow-xl">Get Enterprise Tier</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits / For Agencies Section -->
-    <section id="benefits" class="py-20 border-t border-slate-900 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">Why Global Voice Agencies List With Us</h2>
-                    <ul class="space-y-4 text-slate-300 text-sm">
-                        <li class="flex items-start space-x-3">
-                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
-                            <span><strong>Global Enterprise Traffic:</strong> Direct access to buyers worldwide searching for robust voice architectures.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
-                            <span><strong>International Authority:</strong> Position your agency in front of high-ticket international accounts.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
-                            <span><strong>Direct Conversion:</strong> Zero friction routing straight to your booking links and portfolios.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
-                    <h3 class="text-xl font-bold mb-2">Ready to Scale Globally?</h3>
-                    <p class="text-slate-400 text-sm mb-6">Join our verified international roster and capture enterprise inbound leads.</p>
-                    <a href="#pricing" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30">Apply For Global Listing</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-900 py-12 text-center text-sm text-slate-500">
-        <p>&copy; 2026 VoiceAgency.pro. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+      <a
+        href={utmTargetUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full inline-flex items-center justify-center gap-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-medium py-2 px-3 rounded-lg transition border border-slate-700/80 text-center"
+      >
+        <span>View Profile</span>
+        <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  );
+};
