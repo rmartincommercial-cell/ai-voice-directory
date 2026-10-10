@@ -1,184 +1,184 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceAgency.pro — Verified AI Voice Agencies for Global Enterprises</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-interface AgencyCardProps {
-  name: string;
-  <!-- TARJETA EXCLUSIVA DE CATEGORÍA (500 €/mes) -->
-<div class="relative w-full mb-6 group">
-  <!-- Halo de brillo/glow dorado -->
-  <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75"></div>
+  <!-- HEADER -->
+  <header class="w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-lg font-bold tracking-tight text-white">VoiceAgency<span class="text-amber-400">.pro</span></span>
+      </div>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#niches" class="hover:text-white transition">Niches</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="#agencies" class="hover:text-white transition">For Agencies</a>
+      </nav>
+      <div>
+        <a href="#pricing" class="bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2 rounded-xl shadow hover:opacity-95 transition">
+          List Your Agency
+        </a>
+      </div>
+    </div>
+  </header>
 
-  <!-- Contenedor principal -->
-  <div class="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-5 sm:p-6 shadow-2xl flex flex-col justify-between gap-5">
-    
-    <!-- Header: Badge y Ubicación -->
-    <div class="flex flex-wrap items-center justify-between gap-2">
-      <span class="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-        ⭐ Exclusive Category Leader
+  <!-- MAIN -->
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="py-16 sm:py-24 text-center px-4 max-w-4xl mx-auto">
+      <span class="inline-block text-xs font-mono uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full mb-6">
+        Global Verified Directory
       </span>
-      <span class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">
-        Global
-      </span>
-    </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+        Verified AI Voice Agencies for <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-blue-400">Global Enterprises</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10">
+        Connect with elite conversational AI developers building multi-region voice architectures for luxury real estate, private healthcare, and corporate law.
+      </p>
+    </section>
 
-    <!-- Cuerpo: Logo y Texto -->
-    <div class="flex items-start gap-4">
-      <div class="w-14 h-14 rounded-xl bg-slate-950 p-2 border border-slate-800 shrink-0 flex items-center justify-center">
-        <span class="text-amber-400 font-bold text-lg">AI</span>
-      </div>
-      <div class="space-y-1.5">
-        <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
-          Exclusive Agency Name
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-          Automated cross-border lead qualification and enterprise voice architectures for high-value conversion.
-        </p>
-      </div>
-    </div>
-
-    <!-- Footer y Botón con UTM integrado -->
-    <div class="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-      <div class="text-[11px] text-slate-400 flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span>Verified Enterprise Integrator</span>
+    <!-- NICHES & CARDS -->
+    <section id="niches" class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Specialized Voice Architectures</h2>
+        <p class="text-sm text-slate-400">Explore international vetted providers engineered for global compliance and high-value conversion.</p>
       </div>
 
-      <a
-        href="https://tu-agencia-web.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=exclusive_sponsor"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg transition-all text-center"
-      >
-        <span>Visit Agency</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>: string;
-  logoUrl: string;
-  websiteUrl: string;
-  category: string;
-  location?: string;
-  isExclusive?: boolean;
-}
-
-export const AgencyCard: React.FC<AgencyCardProps> = ({
-  name,
-  description,
-  logoUrl,
-  websiteUrl,
-  category,
-  location = 'Global',
-  isExclusive = false,
-}) => {
-  // Enlace saliente con parámetros UTM para trazabilidad de leads
-  const utmTargetUrl = `${websiteUrl}?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=${
-    isExclusive ? 'exclusive_sponsor' : 'pro_member'
-  }`;
-
-  // -------------------------------------------------------------
-  // 1. TARJETA EXCLUSIVA DE CATEGORÍA (500 €/mes) - MÁXIMO IMPACTO
-  // -------------------------------------------------------------
-  if (isExclusive) {
-    return (
-      <div className="relative w-full mb-6 group">
-        {/* Halo de brillo/glow dorado exterior */}
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
-
-        {/* Estructura principal de la tarjeta */}
-        <div className="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-5 sm:p-6 shadow-2xl flex flex-col justify-between gap-5">
+      <!-- GRID DE 3 COLUMNAS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- LUXURY REAL ESTATE -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col gap-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold">Real Estate</div>
           
-          {/* Cabeza: Badge Exclusivo y Categoría */}
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              ⭐ Exclusive Category Leader
-            </span>
-            <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest">
-              {location}
-            </span>
-          </div>
-
-          {/* Contenido: Logo + Título + Descripción */}
-          <div className="flex items-start gap-4">
-            <img
-              src={logoUrl}
-              alt={`${name} logo`}
-              className="w-14 h-14 rounded-xl object-contain bg-slate-950 p-2 border border-slate-800 shrink-0 shadow-inner"
-            />
-            <div className="space-y-1.5">
-              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                {name}
-                <svg className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20">
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </svg>
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
-                {description}
-              </p>
+          <!-- TARJETA EXCLUSIVA 500€ -->
+          <div class="relative w-full group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75"></div>
+            <div class="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
+                  ⭐ Exclusive Leader
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">Global</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-1.5">
+                  Apex Voice Labs
+                  <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                </h3>
+                <p class="text-xs text-slate-300 mt-1">Automated cross-border lead qualification systems for international property portfolios.</p>
+              </div>
+              <a href="https://apexvoicetest.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=exclusive_sponsor" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow">
+                <span>Visit Agency Website</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </div>
 
-          {/* Pie: Estado y Botón de Acción (CTA) */}
-          <div className="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-            <div className="text-[11px] text-slate-400 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Verified Enterprise Integrator</span>
+          <!-- TARJETAS PRO -->
+          <div class="space-y-2.5">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between">
+              <div>
+                <h4 class="text-xs font-semibold text-white">Silicon Estate AI</h4>
+                <span class="text-[10px] text-slate-400">New York / Miami</span>
+              </div>
+              <a href="https://siliconestate.ai?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=pro_member" target="_blank" rel="noopener noreferrer" class="text-[11px] text-amber-400 hover:underline">View →</a>
             </div>
-
-            <a
-              href={utmTargetUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] text-center"
-            >
-              <span>Visit Agency</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    );
-  }
-
-  // -------------------------------------------------------------
-  // 2. TARJETA ESTÁNDAR PLAN PRO (200 €/mes)
-  // -------------------------------------------------------------
-  return (
-    <div className="w-full bg-slate-900/60 border border-slate-800/90 rounded-xl p-4 hover:border-slate-700 transition-all flex flex-col justify-between gap-3 mb-3">
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <img
-            src={logoUrl}
-            alt={name}
-            className="w-10 h-10 rounded-lg bg-slate-950 p-1.5 border border-slate-800 object-contain"
-          />
-          <div>
-            <h4 className="text-sm font-semibold text-white">{name}</h4>
-            <span className="text-[10px] text-slate-400 font-mono">{location}</span>
           </div>
         </div>
-        <span className="text-[10px] bg-slate-800/80 text-slate-300 px-2 py-0.5 rounded border border-slate-700/60 font-medium">
-          Pro
-        </span>
+
+        <!-- PRIVATE HEALTHCARE -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col gap-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">Healthcare</div>
+          
+          <!-- TARJETA EXCLUSIVA 500€ -->
+          <div class="relative w-full group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75"></div>
+            <div class="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
+                  ⭐ Exclusive Leader
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">Global</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-1.5">
+                  MedVoice Global
+                  <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                </h3>
+                <p class="text-xs text-slate-300 mt-1">Secure, multi-region virtual medical receptionists adhering to international privacy frameworks.</p>
+              </div>
+              <a href="https://medvoiceglobal.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=exclusive_sponsor" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow">
+                <span>Visit Agency Website</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- TARJETAS PRO -->
+          <div class="space-y-2.5">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between">
+              <div>
+                <h4 class="text-xs font-semibold text-white">HealthDial Systems</h4>
+                <span class="text-[10px] text-slate-400">London / Singapore</span>
+              </div>
+              <a href="https://healthdial.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=pro_member" target="_blank" rel="noopener noreferrer" class="text-[11px] text-amber-400 hover:underline">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CORPORATE LAW -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col gap-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold">Corporate Law</div>
+          
+          <!-- TARJETA EXCLUSIVA 500€ -->
+          <div class="relative w-full group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75"></div>
+            <div class="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
+                  ⭐ Exclusive Leader
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">Global</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-1.5">
+                  LexGlobal AI
+                  <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                </h3>
+                <p class="text-xs text-slate-300 mt-1">Encrypted intake screening and automated multi-jurisdiction scheduling for global law firms.</p>
+              </div>
+              <a href="https://lexglobal.ai?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=exclusive_sponsor" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow">
+                <span>Visit Agency Website</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- TARJETAS PRO -->
+          <div class="space-y-2.5">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between">
+              <div>
+                <h4 class="text-xs font-semibold text-white">JurisVoice Int.</h4>
+                <span class="text-[10px] text-slate-400">Frankfurt / Toronto</span>
+              </div>
+              <a href="https://jurisvoice.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=pro_member" target="_blank" rel="noopener noreferrer" class="text-[11px] text-amber-400 hover:underline">View →</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
+  </main>
 
-      <p className="text-xs text-slate-400 line-clamp-2">{description}</p>
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+    <p>&copy; 2026 VoiceAgency.pro. All rights reserved.</p>
+  </footer>
 
-      <a
-        href={utmTargetUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full inline-flex items-center justify-center gap-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-medium py-2 px-3 rounded-lg transition border border-slate-700/80 text-center"
-      >
-        <span>View Profile</span>
-        <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
-    </div>
-  );
-};
+</body>
+</html>
