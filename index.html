@@ -2,7 +2,60 @@ import React from 'react';
 
 interface AgencyCardProps {
   name: string;
-  description: string;
+  <!-- TARJETA EXCLUSIVA DE CATEGORÍA (500 €/mes) -->
+<div class="relative w-full mb-6 group">
+  <!-- Halo de brillo/glow dorado -->
+  <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-600/40 rounded-2xl blur-md opacity-75"></div>
+
+  <!-- Contenedor principal -->
+  <div class="relative w-full bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-5 sm:p-6 shadow-2xl flex flex-col justify-between gap-5">
+    
+    <!-- Header: Badge y Ubicación -->
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <span class="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        ⭐ Exclusive Category Leader
+      </span>
+      <span class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">
+        Global
+      </span>
+    </div>
+
+    <!-- Cuerpo: Logo y Texto -->
+    <div class="flex items-start gap-4">
+      <div class="w-14 h-14 rounded-xl bg-slate-950 p-2 border border-slate-800 shrink-0 flex items-center justify-center">
+        <span class="text-amber-400 font-bold text-lg">AI</span>
+      </div>
+      <div class="space-y-1.5">
+        <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+          Exclusive Agency Name
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Automated cross-border lead qualification and enterprise voice architectures for high-value conversion.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer y Botón con UTM integrado -->
+    <div class="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+      <div class="text-[11px] text-slate-400 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Verified Enterprise Integrator</span>
+      </div>
+
+      <a
+        href="https://tu-agencia-web.com?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=exclusive_sponsor"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg transition-all text-center"
+      >
+        <span>Visit Agency</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>: string;
   logoUrl: string;
   websiteUrl: string;
   category: string;
