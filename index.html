@@ -1,306 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VoiceAgency.pro — Verified AI Voice Agencies for Global Enterprises</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Directory Pass - Voice Agency</title>
   
-  <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Global verified directory of elite conversational AI developers and voice agencies for enterprise deployment. Launch phase open for founding members.">
-  <meta name="keywords" content="AI Voice Agencies, Conversational AI, Vapi, Retell AI, Bland AI, Voice Bot Developers, Enterprise Voice AI">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://voiceagency.pro">
-  
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://voiceagency.pro">
-  <meta property="og:title" content="VoiceAgency.pro — Verified AI Voice Agencies (Launch Phase)">
-  <meta property="og:description" content="Connect with elite conversational AI developers building multi-region voice architectures. Founding agency slots now open.">
-  <meta property="og:image" content="https://voiceagency.pro/og-image.png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://voiceagency.pro">
-  <meta name="twitter:title" content="VoiceAgency.pro — Verified AI Voice Agencies">
-  <meta name="twitter:description" content="Connect with elite conversational AI developers building multi-region voice architectures for global enterprises.">
-  <meta name="twitter:image" content="https://voiceagency.pro/og-image.png">
-
-  <!-- JSON-LD Structured Data for Directory SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Verified AI Voice Agencies Directory",
-    "description": "Global directory of verified enterprise AI voice agencies and conversational solution providers.",
-    "url": "https://voiceagency.pro",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Real Estate AI Voice Solutions"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Healthcare AI Voice Solutions"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Corporate Law AI Voice Solutions"
-      }
-    ]
-  }
-  </script>
-
+  <!-- Estilos de diseño (Tailwind CSS para un acabado moderno) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Script Oficial de Lemon Squeezy (Necesario para el modal emergente) -->
   <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-center items-center p-6">
 
-  <!-- BANNER FASE DE LANZAMIENTO -->
-  <div class="bg-gradient-to-r from-amber-500/20 via-indigo-500/20 to-amber-500/20 border-b border-amber-500/30 text-amber-300 text-[11px] font-mono py-1.5 px-4 text-center flex items-center justify-center gap-2">
-    <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-    <span><strong>DIRECTORY LAUNCH PHASE:</strong> Founding agency slots now open. Secure priority placement before public promotion.</span>
+  <!-- Cabecera -->
+  <div class="text-center max-w-2xl mb-12">
+    <h1 class="text-4xl font-extrabold tracking-tight text-white mb-4">
+      Software Directory Access
+    </h1>
+    <p class="text-lg text-slate-400">
+      Acceso instantáneo y automatizado a nuestra base de datos verificada de recursos de IA conversacional.
+    </p>
   </div>
 
-  <!-- HEADER -->
-  <header class="w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-lg font-bold tracking-tight text-white">VoiceAgency<span class="text-amber-400">.pro</span></span>
-        <span class="text-[9px] font-mono uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40 px-1.5 py-0.5 rounded">Launch Beta</span>
-      </div>
-      <nav class="hidden sm:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#directory" class="hover:text-white transition">Directory</a>
-        <a href="#pricing" class="hover:text-white transition">Pricing</a>
-      </nav>
+  <!-- Rejilla de Precios -->
+  <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full">
+
+    <!-- PLAN PRO (200€/mes) -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 flex flex-col justify-between hover:border-indigo-500 transition-all shadow-xl">
       <div>
-        <a href="#pricing" class="bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2 rounded-xl shadow hover:opacity-95 transition">
-          List Your Agency
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="flex-grow">
-    <!-- HERO -->
-    <section class="py-12 sm:py-16 text-center px-4 max-w-4xl mx-auto">
-      <span class="inline-block text-xs font-mono uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full mb-4">
-        ⚡ Founding Agencies Launch Phase
-      </span>
-      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
-        Verified AI Voice Agencies for <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-blue-400">Global Enterprises</span>
-      </h1>
-      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
-        Connect with elite conversational AI developers building multi-region voice architectures. Be among the founding agencies to capture top category authority.
-      </p>
-    </section>
-
-    <!-- DIRECTORY SECTION -->
-    <section id="directory" class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
-      
-      <!-- SECCIÓN EXCLUSIVE (FILA SUPERIOR - 3 SECTORES LIBRES) -->
-      <div class="mb-12">
-        <div class="text-center mb-6">
-          <h2 class="text-xl sm:text-2xl font-bold text-white uppercase tracking-wider">⭐ Exclusive Category Leaders</h2>
-          <p class="text-xs text-slate-400 mt-1">Only 1 exclusive sponsor per category. Dominant above-the-fold visibility during launch.</p>
+        <h2 class="text-2xl font-bold text-white mb-2">Pro Pass</h2>
+        <p class="text-slate-400 text-sm mb-6">Ideal para profesionales y pequeños proyectos.</p>
+        <div class="flex items-baseline mb-6">
+          <span class="text-4xl font-extrabold text-white">200€</span>
+          <span class="text-slate-400 ml-2">/ mes</span>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <!-- EXCLUSIVE: SECTOR 1 (REAL ESTATE) -->
-          <div class="relative w-full group">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/30 via-yellow-400/20 to-amber-600/30 rounded-2xl blur opacity-60"></div>
-            <div class="relative w-full bg-slate-900/90 border-2 border-dashed border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col justify-between gap-4 h-full text-center">
-              <div>
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold">Real Estate</span>
-                  <span class="inline-flex items-center gap-1 bg-amber-500/20 border border-amber-500/50 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
-                    ⭐ Launch Slot Available
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-200 mb-1">Claim Real Estate Leadership</h3>
-                <p class="text-xs text-slate-400">Become the founding exclusive category sponsor for enterprise real estate voice automation.</p>
-              </div>
-              <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188" class="lemonsqueezy-button w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow hover:opacity-95">
-                <span>Claim Exclusive Slot (500 €/mo)</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- EXCLUSIVE: SECTOR 2 (HEALTHCARE) -->
-          <div class="relative w-full group">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/30 via-yellow-400/20 to-amber-600/30 rounded-2xl blur opacity-60"></div>
-            <div class="relative w-full bg-slate-900/90 border-2 border-dashed border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col justify-between gap-4 h-full text-center">
-              <div>
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">Healthcare</span>
-                  <span class="inline-flex items-center gap-1 bg-amber-500/20 border border-amber-500/50 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
-                    ⭐ Launch Slot Available
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-200 mb-1">Claim Healthcare Leadership</h3>
-                <p class="text-xs text-slate-400">Become the founding exclusive category sponsor for healthcare voice AI architecture.</p>
-              </div>
-              <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188" class="lemonsqueezy-button w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow hover:opacity-95">
-                <span>Claim Exclusive Slot (500 €/mo)</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- EXCLUSIVE: SECTOR 3 (CORPORATE LAW) -->
-          <div class="relative w-full group">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500/30 via-yellow-400/20 to-amber-600/30 rounded-2xl blur opacity-60"></div>
-            <div class="relative w-full bg-slate-900/90 border-2 border-dashed border-amber-500/60 rounded-xl p-5 shadow-xl flex flex-col justify-between gap-4 h-full text-center">
-              <div>
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-mono uppercase tracking-wider text-blue-400 font-bold">Corporate Law</span>
-                  <span class="inline-flex items-center gap-1 bg-amber-500/20 border border-amber-500/50 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
-                    ⭐ Launch Slot Available
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-200 mb-1">Claim Law Leadership</h3>
-                <p class="text-xs text-slate-400">Become the founding exclusive category sponsor for legal intake voice automation.</p>
-              </div>
-              <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188" class="lemonsqueezy-button w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition text-center shadow hover:opacity-95">
-                <span>Claim Exclusive Slot (500 €/mo)</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- SECCIÓN PRO LISTINGS (FILA INFERIOR - 10 SLOTS LIBRES POR SECTOR) -->
-      <div>
-        <div class="text-center mb-8 border-t border-slate-800/80 pt-10">
-          <h2 class="text-xl sm:text-2xl font-bold text-white uppercase tracking-wider">Pro Verified Agencies (10 Slots / Sector)</h2>
-          <p class="text-xs text-slate-400 mt-1">Standard directory placement for founding launch members</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          <!-- PRO: SECTOR 1 (REAL ESTATE) -->
-          <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold mb-4 text-center border-b border-slate-800 pb-2">
-              Real Estate — Pro Slots
-            </h3>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #1</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #2</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #3</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #4</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #5</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #6</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #7</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #8</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #9</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #10</span></a>
-            </div>
-          </div>
-
-          <!-- PRO: SECTOR 2 (HEALTHCARE) -->
-          <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-4 text-center border-b border-slate-800 pb-2">
-              Healthcare — Pro Slots
-            </h3>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #1</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #2</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #3</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #4</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #5</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #6</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #7</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #8</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #9</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #10</span></a>
-            </div>
-          </div>
-
-          <!-- PRO: SECTOR 3 (CORPORATE LAW) -->
-          <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold mb-4 text-center border-b border-slate-800 pb-2">
-              Corporate Law — Pro Slots
-            </h3>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #1</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #2</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #3</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #4</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #5</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #6</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #7</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #8</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #9</span></a>
-              <a href="#pricing" class="border border-dashed border-slate-800 hover:border-amber-500/50 rounded-lg p-3 text-center transition flex flex-col items-center justify-center group bg-slate-950/40"><span class="text-[10px] text-slate-400 group-hover:text-amber-400 font-mono">+ Founding Slot #10</span></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-    <!-- PRICING SECTION -->
-    <section id="pricing" class="max-w-4xl mx-auto px-4 sm:px-6 pb-20 border-t border-slate-800/80 pt-16">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl font-bold text-white mb-2">Founding Agency Plans</h2>
-        <p class="text-slate-400 text-xs">Select your tier to feature your conversational agency in front of enterprise buyers during our launch phase.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         
-        <!-- PRO TIER (200€) -->
-        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 flex flex-col justify-between">
-          <div>
-            <div class="text-[11px] font-mono uppercase text-slate-400 mb-1">Pro Placement</div>
-            <div class="flex items-baseline gap-1 mb-3">
-              <span class="text-3xl font-extrabold text-white">200 €</span>
-              <span class="text-slate-400 text-[10px]">/ month</span>
-            </div>
-            <ul class="text-xs text-slate-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Equitative grid slot (10 slots max/sector)</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Verified badge & company profile</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Direct outbound URL with UTM tracking</li>
-            </ul>
-          </div>
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/ce096003-b077-47ea-a6ef-6ac79e1ff918" class="lemonsqueezy-button w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs py-2.5 rounded-lg border border-slate-700 transition block">
-            Subscribe Pro Slot (200 €/mo)
-          </a>
-        </div>
-
-        <!-- EXCLUSIVE TIER (500€) -->
-        <div class="relative bg-slate-900 border border-amber-500/60 rounded-xl p-5 flex flex-col justify-between">
-          <span class="absolute -top-2.5 right-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-bold text-[9px] uppercase px-2.5 py-0.5 rounded-full">
-            Exclusive Sponsor
-          </span>
-          <div>
-            <div class="text-[11px] font-mono uppercase text-amber-400 mb-1">Exclusive Sponsorship</div>
-            <div class="flex items-baseline gap-1 mb-3">
-              <span class="text-3xl font-extrabold text-white">500 €</span>
-              <span class="text-slate-400 text-[10px]">/ month</span>
-            </div>
-            <ul class="text-xs text-slate-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><span class="text-amber-400">★</span> <strong>1 Exclusive slot per category</strong></li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">★</span> Top-of-fold visual leadership card</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">★</span> Direct lead referral & monthly reporting</li>
-            </ul>
-          </div>
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188" class="lemonsqueezy-button w-full text-center bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition block">
-            Claim Exclusive Slot (500 €/mo)
-          </a>
-        </div>
-
+        <ul class="space-y-3 text-slate-300 mb-8 text-sm">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Acceso completo al directorio cloud
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Actualizaciones automáticas
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Licencia individual de uso
+          </li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
-    <p>&copy; 2026 VoiceAgency.pro. All rights reserved.</p>
+      <!-- BOTÓN PLAN PRO -->
+      <a 
+        href="https://voiceagency.lemonsqueezy.com/checkout/buy/ce096003-b077-47ea-a6ef-6ac79e1ff918?embed=1" 
+        class="lemonsqueezy-button block text-center w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-indigo-600/30"
+      >
+        Obtener Pro Pass
+      </a>
+    </div>
+
+    <!-- PLAN EXCLUSIVE (500€/mes) -->
+    <div class="bg-slate-800 border-2 border-indigo-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl">
+      <div class="absolute -top-3 right-6 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        Recomendado
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-2">Exclusive Pass</h2>
+        <p class="text-slate-400 text-sm mb-6">Para empresas que requieren prioridad y soporte exclusivo.</p>
+        <div class="flex items-baseline mb-6">
+          <span class="text-4xl font-extrabold text-white">500€</span>
+          <span class="text-slate-400 ml-2">/ mes</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 mb-8 text-sm">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Todo lo incluido en el plan Pro
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Ubicación prioritaria en el directorio
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+            Acceso a la base de datos de IA verificada
+          </li>
+        </ul>
+      </div>
+
+      <!-- BOTÓN PLAN EXCLUSIVE -->
+      <a 
+        href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188?embed=1" 
+        class="lemonsqueezy-button block text-center w-full bg-indigo-500 hover:bg-indigo-400 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-indigo-500/30"
+      >
+        Obtener Exclusive Pass
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Pie de página informativo -->
+  <footer class="mt-12 text-center text-xs text-slate-500">
+    <p>Procesado de forma segura por Lemon Squeezy (Merchant of Record).</p>
   </footer>
 
 </body>
